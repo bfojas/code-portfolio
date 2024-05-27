@@ -24,6 +24,7 @@ const NavContainer = styled.div`
 
   a.active {
     background-color: rgb(40, 44, 52);
+    color: white;
     .nav-logo {
       display: none;
     }
