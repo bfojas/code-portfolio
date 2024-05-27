@@ -1,13 +1,10 @@
 import React from 'react';
-import TestComponent from '@components/TestComponent';
+import PageLayout from '@components/PageLayout';
 
 function App() {
   return (
     <div className="App">
-      <TestComponent />
-      <header className="App-header">
-       blah
-      </header>
+      <PageLayout />
     </div>
   );
 }

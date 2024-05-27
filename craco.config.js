@@ -1,4 +1,13 @@
 const path = require('path');
+const fs = require('fs');
+
+const srcPath = path.resolve(__dirname, 'src');
+const folders = fs.readdirSync(srcPath).filter(file => fs.statSync(path.join(srcPath, file)).isDirectory());
+
+const alias = folders.reduce((acc, folder) => {
+  acc[`@${folder}`] = path.resolve(__dirname, 'src', folder);
+  return acc;
+}, {});
 
 const {
   loaderByName,
@@ -14,9 +23,7 @@ module.exports = {
       webpackConfig.module.rules[1].oneOf[1] = transformBabelLoader(loader);
       return webpackConfig;
     },
-    alias: {
-      '@components': path.resolve(__dirname, 'src/components'),
-    },
+    alias
   },
   jest: {
     configure: jestConfig => {
