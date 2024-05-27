@@ -14,6 +14,10 @@ const LayoutContainer = styled.div`
   .multi-line {
     display: flex;
     flex-direction: row;
+
+    a {
+      word-break: break-word;
+    }
   }
 
   .multi-line-tab {

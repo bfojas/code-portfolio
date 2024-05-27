@@ -12,6 +12,7 @@ const NavContainer = styled.div`
   a {
     color: rgb(170, 170, 170);
     text-decoration: none;
+
     .nav-logo-active {
       display: none;
     }

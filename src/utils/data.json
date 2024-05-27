@@ -14,11 +14,11 @@
       "title": " Senior Software Engineer",
       "date": "SEP 2020 - PRESENT",
       "accomplishments": [
-        "Major contributor to Venture Home,  the main landing surface for existing customers.",
-        "Optimized server-side rendering processes for Venture Home creating a ~77% reduction in server response time for power users.",
-        "Led a project to unify app navigation across all “Website and Marketing” product pages, coordinating efforts across multiple teams and codebases.",
-        "Contributor and maintainer for a shared-components Lerna mono-repo.",
-        "Contributor to multiple internal tools including admin tools for account references and a chrome extension for traffic event observation."
+        "- Major contributor to Venture Home,  the main landing surface for existing customers.",
+        "- Optimized server-side rendering processes for Venture Home creating a ~77% reduction in server response time for power users.",
+        "- Led a project to unify app navigation across all “Website and Marketing” product pages, coordinating efforts across multiple teams and codebases.",
+        "- Contributor and maintainer for a shared-components Lerna mono-repo.",
+        "- Contributor to multiple internal tools including admin tools for account references and a chrome extension for traffic event observation."
       ]
     },
     {
@@ -26,10 +26,10 @@
       "title": "Front End Developer",
       "date": "SEP 2019 - MAR 2023",
       "accomplishments": [
-        "Sole front end developer for role-based enterprise level tools for use by Foster care caseworkers.",
-        "Utilize React, Docker, AWS and Figma for frontend design, development and deployment.",
-        "Developed AWS Lambda function for image compression and synchronous fetching solution to reduce client load times by up to 70%.",
-        "Ensure the app is secure and adheres to HIPAA compliance by implementing best practices such as Casbin RBAC and authorization tokens to protect routes, API endpoints and AWS file transfers."
+        "- Sole front end developer for role-based enterprise level tools for use by Foster care caseworkers.",
+        "- Utilize React, Docker, AWS and Figma for frontend design, development and deployment.",
+        "- Developed AWS Lambda function for image compression and synchronous fetching solution to reduce client load times by up to 70%.",
+        "- Ensure the app is secure and adheres to HIPAA compliance by implementing best practices such as Casbin RBAC and authorization tokens to protect routes, API endpoints and AWS file transfers."
       ]
     },
     {
@@ -37,9 +37,9 @@
       "title": "Full Stack Developer / Co-Host",
       "date": "APR 2019 - AUG 2020",
       "accomplishments": [
-        "Worked on the Jobs for Hope Project for the LA County Homeless Initiative utilizing React, Node / Express, CSS / SASS, and PostgreSQL. Contributions to responsive design elements, SQL schemas, routes and registration logic.",
-        "Contributions to login/registration logic and input validations using JSON Web Tokens and B-Crypt, and MS SQL Server schema and functions for the TDM project for LADOT.",
-        "Contributions to search algorithm logic, SQL query functions and data scraping for Food Oasis LA project."
+        "- Worked on the Jobs for Hope Project for the LA County Homeless Initiative utilizing React, Node / Express, CSS / SASS, and PostgreSQL. Contributions to responsive design elements, SQL schemas, routes and registration logic.",
+        "- Contributions to login/registration logic and input validations using JSON Web Tokens and B-Crypt, and MS SQL Server schema and functions for the TDM project for LADOT.",
+        "- Contributions to search algorithm logic, SQL query functions and data scraping for Food Oasis LA project."
       ]
     },
     {
@@ -47,10 +47,10 @@
       "title": "Full Stack Developer",
       "date": "JUL 2019 - AUG 2019",
       "accomplishments": [
-        "Utilized React for the front end and Node/Express and PostgreSQL for the backend.",
-        "Responsible for implementing Redis for session store and global state (Redux) for user information.",
-        "Developed Postgres queries and database schemas and consumable RESTful endpoints for utilization. Created API endpoint documentations.",
-        "Designed unit tests using Jest/Enzyme and endpoint test suites using Postman Collection Runner."
+        "- Utilized React for the front end and Node/Express and PostgreSQL for the backend.",
+        "- Responsible for implementing Redis for session store and global state (Redux) for user information.",
+        "- Developed Postgres queries and database schemas and consumable RESTful endpoints for utilization. Created API endpoint documentations.",
+        "- Designed unit tests using Jest/Enzyme and endpoint test suites using Postman Collection Runner."
       ]
     }
   ],
