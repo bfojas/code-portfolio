@@ -1,11 +1,7 @@
 import React from 'react';
 import { styled } from 'linaria/react';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import useData from '@utils/useData'
-import CodeRender from './CodeRender';
+import Nav from '@components/Nav';
+import Router from '@components/Router'
 
 const LayoutContainer = styled.div`
   width: 100%;
@@ -24,6 +20,14 @@ const LayoutContainer = styled.div`
     white-space: pre;
   }
 
+  .line-punctuation {
+    color: white;
+  }
+
+  .obj-key-line {
+    color: rgb(91, 133, 201) !important;
+  }
+
   .react-syntax-highlighter-line-number {
     min-width: 2.25em !important;
     border-right: 1px solid grey;
@@ -32,18 +36,13 @@ const LayoutContainer = styled.div`
   }
 `
 
-export default function PageLayout({children}) {
-  const text = useData('code');
-
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <CodeRender text={text}/>,
-    },
-  ]);
+export default function PageLayout() {
   return(
     <LayoutContainer>
-      <RouterProvider router={router} />
+      <Nav />
+      <div>
+        <Router />
+      </div>
     </LayoutContainer>
   )
 }
