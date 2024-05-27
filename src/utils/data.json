@@ -4,6 +4,10 @@
   "skills": [
     "ReactJS/NextJS", "Javascript", "HTML/CSS", "NodeJs/Express", "REST API", "GraphQL", "Git", "Jest/RTL", "Cypress"
   ],
+  "links": {
+    "LinkedIn": "https://www.linkedin.com/in/bradley-fojas",
+    "GitHub": "https://github.com/bfojas"
+  },
   "experience": [
     {
       "org": "GoDaddy",

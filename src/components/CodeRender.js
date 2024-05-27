@@ -2,18 +2,13 @@ import React from 'react';
 import SyntaxHighlighter, { createElement } from 'react-syntax-highlighter';
 import { atomOneDark
   as theme } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import {
+  updateValue,
+  addClassName,
+  mergeWithPunc,
+  convertToLink
+} from '@utils/renderAlters'
 
-const updateValue = (child, value) => {
-  return {
-    ...child,
-    children: [
-      {
-        ...child.children[0],
-        value
-      }
-    ]
-  } 
-};
 
 export default function CodeRender({ text }) {
   return (
@@ -28,22 +23,27 @@ export default function CodeRender({ text }) {
                 const children = row.children.map((child, i, arr) => {
                   const currentValue = child.children?.[0].value
                   const nextValue = arr[i+1]?.children?.[0].value;
-                  if (nextValue === ',\n') {
-                    return updateValue(child, currentValue + ',')
+
+                  if (/http/.test(currentValue)) {
+                    child = convertToLink(child, currentValue)
                   }
 
-                  if (nextValue === ';\n') {
-                    return updateValue(child, currentValue + ';')
+                  if ([',\n', ';\n'].includes(nextValue)) {
+                    return mergeWithPunc(child, currentValue, arr[i+1])
                   }
 
                   if ([',\n', ';\n'].includes(currentValue)) {
                     return updateValue(child, '\n')
                   }
 
-                  if (/\S/.test(child.children?.[0]?.value)) return child;
+                  if(/: /.test(nextValue)) {
+                    return addClassName(child, 'obj-key-line')
+                  }
+
+                  if (/\S/.test(currentValue)) return child;
                   return {
                     ...child,
-                    tagName: 'div',
+                    tagName: 'span',
                     properties: {
                       className: ['multi-line-tab']
                     }
@@ -51,7 +51,6 @@ export default function CodeRender({ text }) {
                 });
 
                 const lineNumberElement = children?.shift();
-                console.log('line', lineNumberElement)
 
                 if (lineNumberElement) {
                     row.children = [
