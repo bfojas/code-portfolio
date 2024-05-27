@@ -21,12 +21,12 @@ export default function NavItem({to, fileName}) {
     >
       <NavItemContainer>
           <img
-            src='/js-image.png'
+            src={`${process.env.PUBLIC_URL}/js-image.png` }
             className='nav-logo'
             alt=''
           />
           <img
-            src='/js-active.png'
+            src={`${process.env.PUBLIC_URL}/js-active.png` }
             className='nav-logo-active'
             alt=''
           />
