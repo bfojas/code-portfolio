@@ -10,6 +10,7 @@ const NavContainer = styled.div`
   background-color: rgb(24, 24, 24);
   position: sticky;
   top: 0;
+  user-select: none;
 
   a {
     color: rgb(170, 170, 170);
