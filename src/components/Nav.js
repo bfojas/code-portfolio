@@ -8,6 +8,8 @@ const NavContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   background-color: rgb(24, 24, 24);
+  position: sticky;
+  top: 0;
 
   a {
     color: rgb(170, 170, 170);
