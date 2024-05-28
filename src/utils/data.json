@@ -1,6 +1,9 @@
 {
   "name": "Bradley Fojas",
-  "title": "Software Engineer",
+  "about": {
+    "title": "Software Engineer",
+    "summary": "Full Stack Developer with experience developing and enhancing high traffic, enterprise level user experiences, and a passion for performance, quality and experimentation."
+  },
   "skills": [
     "ReactJS/NextJS", "Javascript", "HTML/CSS", "NodeJs/Express", "REST API", "GraphQL", "Git", "Jest/RTL", "Cypress"
   ],

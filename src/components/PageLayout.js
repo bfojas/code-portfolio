@@ -32,6 +32,10 @@ const LayoutContainer = styled.div`
     color: rgb(91, 133, 201) !important;
   }
 
+  .maintain-space {
+    min-width: 17.59px;
+  }
+
   .react-syntax-highlighter-line-number {
     min-width: 2.25em !important;
     border-right: 1px solid grey;

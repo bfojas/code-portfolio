@@ -46,4 +46,3 @@ export const convertToLink = (child, currentValue) => {
     }
   }
 };
-

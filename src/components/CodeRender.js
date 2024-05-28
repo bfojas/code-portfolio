@@ -40,6 +40,10 @@ export default function CodeRender({ text }) {
                     return addClassName(child, 'obj-key-line')
                   }
 
+                  if(/: /.test(currentValue)) {
+                    return addClassName(child, 'maintain-space')
+                  }
+
                   if (/\S/.test(currentValue)) return child;
                   return {
                     ...child,
