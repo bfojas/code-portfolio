@@ -1,7 +1,9 @@
 import React from 'react';
 import SyntaxHighlighter, { createElement } from 'react-syntax-highlighter';
-import { atomOneDark
-  as theme } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { 
+  atomOneDark as darkTheme,
+  a11yLight as lightTheme
+} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import {
   updateValue,
   addClassName,
@@ -9,8 +11,7 @@ import {
   convertToLink
 } from '@utils/renderAlters'
 
-
-export default function CodeRender({ text }) {
+export default function CodeRender({ text, dark }) {
   return (
     <SyntaxHighlighter
         language='javascript'
@@ -79,7 +80,7 @@ export default function CodeRender({ text }) {
             });
         }}
         showLineNumbers={true}
-        style={theme}
+        style={dark ? darkTheme : lightTheme}
         lineNumberContainerStyle={{
           minWidth: '2.25em',backgroundColor: '#f5f5f5',
         }}

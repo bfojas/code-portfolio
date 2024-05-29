@@ -1,9 +1,22 @@
 import React from 'react';
 import { styled } from 'linaria/react';
+
 import Nav from '@components/Nav';
-import Router from '@components/Router'
+import Router from '@components/Router';
+import useTheme from '@utils/useTheme';
+import * as themeConstants from '@utils/themeConstants'
 
 const LayoutContainer = styled.div`
+  :global() {
+    body.theme-dark {
+      background-color: ${themeConstants.dark.body} !important;
+    }
+
+    body.theme-light {
+      background-color: ${themeConstants.light.body} !important;
+    }
+  }
+
   width: 100%;
   height: 100%;
   
@@ -45,11 +58,13 @@ const LayoutContainer = styled.div`
 `
 
 export default function PageLayout() {
+  const [dark, setDark] = useTheme();
+
   return(
-    <LayoutContainer>
-      <Nav />
+    <LayoutContainer className={ dark ? 'theme-dark' : 'theme-light' }>
+      <Nav dark={ dark } setDark={ setDark } />
       <div>
-        <Router />
+        <Router dark={ dark }/>
       </div>
     </LayoutContainer>
   )

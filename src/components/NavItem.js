@@ -4,30 +4,31 @@ import { NavLink } from "react-router-dom";
 
 const NavItemContainer = styled.div`
   padding: 4px 12px;
-  border: 1px solid rgb(40, 44, 52);
   margin-left: -1px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   min-width: 125px;
+
+  .nav-logo {
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+  }
 `;
 
-export default function NavItem({to, fileName}) {
+export default function NavItem({dark, to, fileName}) {
 
+  const logoFile = dark ? 'transparent-js' : 'transparent-js-light'
   return (
     <NavLink
       to={to} 
     >
-      <NavItemContainer>
+      <NavItemContainer className='nav-item'>
           <img
-            src={`${process.env.PUBLIC_URL}/js-image.png` }
+            src={`${process.env.PUBLIC_URL}/${logoFile}.png` }
             className='nav-logo'
-            alt=''
-          />
-          <img
-            src={`${process.env.PUBLIC_URL}/js-active.png` }
-            className='nav-logo-active'
             alt=''
           />
           <span>{`${fileName}.js`}</span>
