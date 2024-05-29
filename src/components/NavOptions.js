@@ -13,11 +13,11 @@ const NavOptionButton = styled.div`
   border-radius: 3px;
 
   > div {
-    line-height: 16px;
-    margin-left: 4px
+    padding: 5px 3px;
+    line-height: 4px;
+    width: 100%;
+    height: 100%;
   }
-
- 
 `;
 
 const NavOptionItem = styled.div`
@@ -35,7 +35,6 @@ export default function NavOptions({dark, setDark}) {
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
 
-  
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (
